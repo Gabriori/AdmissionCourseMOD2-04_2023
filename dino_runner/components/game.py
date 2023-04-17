@@ -36,9 +36,10 @@ class Game:
                 self.playing = False
 
     def update(self):
-        self.obstacle_manager.update(self)
         user_input = pygame.key.get_pressed()
         self.player.update(user_input)
+        self.obstacle_manager.update(self)
+        
         
 
     def draw(self):
